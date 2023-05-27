@@ -1,0 +1,221 @@
+html {
+	overflow-x: hidden !important;
+	height: 100%;
+  }
+  
+  body {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 16px;
+	height: 100%;
+	text-align: center;
+	background: #2D2D32;
+	color: #00CC99;
+	font-family: 'Poppins', sans-serif;
+  }
+  
+  @-o-viewport {
+	width: device-width;
+  }
+  
+  @-ms-viewport {
+	width: device-width;
+  }
+  
+  @viewport {
+	width: device-width;
+  }
+  
+  #background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-attachment: scroll;
+	background-position: center;
+	background-repeat: repeat;
+	background-origin: content-box;
+	background-image: url('../img/ArchLinuxGril.png');
+	z-index: -2;
+  }
+  
+  #overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.4;
+	z-index: -1;
+  }
+  
+  .half-hero-wrap {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	top: 29%;
+  }
+  
+  .half-hero-wrap h4 {
+	padding: 15px 30px;
+	background: rgba(0, 0, 0, 0.21);
+	text-align: left;
+	font-size: 11px;
+	float: left;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.71);
+	letter-spacing: 6px;
+	font-weight: 600;
+	white-space: nowrap; 
+  }
+  
+  .click:hover,
+  .click:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+  }
+  
+  .click {
+	--color: #11c28a;
+	--hover: #11c28a;
+  }
+  
+  .loader-wrap {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	background: #111017;
+	top: 0;
+	overflow: hidden;
+	left: 0;
+	transform: translate3d(0, 0, 0);
+}
+
+.pin {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	margin-left: 50px;
+	width: 200px;
+	height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-size: 12px;
+	font-weight: 400;
+	margin-top: -20px;
+	color: rgba(255, 255, 255, 0.31);
+	font-family: 'Poppins', sans-serif;
+	text-align: left;
+}
+
+.pin:after {
+	content: "$Biaogo";
+	position: absolute;
+	white-space: pre;
+	left: -20%;
+	color: rgba(255, 255, 255, 0.51);
+}
+
+.pin:before {
+	content: "      _";
+	position: absolute;
+	overflow: hidden;
+	white-space: pre;
+	text-align: left;
+	color: rgba(255, 255, 255, 0.51);
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes pinanim {
+	0% {
+		max-width: 0;
+	}
+	100% {
+		max-width: 100%;
+	}
+}
+
+
+.nav-button {
+	width: 28px;
+	height: 50px;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	margin-top: 30px;
+}
+.nav-button span {
+	width: 100%;
+	float: left;
+	margin-bottom: 6px;
+	height: 2px;
+	background: #fff;
+	position: relative;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.nav-button .ncs {
+	width: 70%;
+}
+.nav-button .nbs,
+.nav-button.cmenu:hover .nbs {
+	width: 0;
+}
+.nav-button:hover .ncs,
+.nav-button:hover .nbs {
+	width: 100%;
+}
+.nav-button.cmenu .nos {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	margin-bottom: 0;
+	top: 8.5px;
+}
+.nav-button.cmenu .ncs {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	margin-bottom: 0;
+	top: 6px;
+	width: 100%;
+}
+.nav-button:hover .menu-button-text {
+	color: #fff;
+}
+.menu-button-text {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: -1px;
+	color: rgba(255, 255, 255, 0.41);
+	font-size: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.nav-button.cmenu .menu-button-text {
+	margin-top: 16px;
+}
